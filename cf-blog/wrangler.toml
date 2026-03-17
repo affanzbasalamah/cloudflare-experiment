@@ -7,9 +7,9 @@ compatibility_flags = ["nodejs_compat"]
 [[d1_databases]]
 binding = "DB"
 database_name = "cf-blog-db"
-database_id = "REPLACE_WITH_DATABASE_ID"
+database_id = "26517808-ff70-4639-b03c-9f270eba8833"
 
 # R2 bucket — run `wrangler r2 bucket create cf-blog-assets` first
 [[r2_buckets]]
-binding = "BUCKET"
 bucket_name = "cf-blog-assets"
+binding = "cf_blog_assets"
