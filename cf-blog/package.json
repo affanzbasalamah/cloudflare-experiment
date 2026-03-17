@@ -1,0 +1,22 @@
+{
+  "name": "cf-blog",
+  "version": "1.0.0",
+  "description": "Cloudflare Workers blog with D1 database and R2 object storage",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:create": "wrangler d1 create cf-blog-db",
+    "db:migrate": "wrangler d1 execute cf-blog-db --file=./schema.sql",
+    "db:migrate:local": "wrangler d1 execute cf-blog-db --local --file=./schema.sql",
+    "db:query": "wrangler d1 execute cf-blog-db --command",
+    "bucket:create": "wrangler r2 bucket create cf-blog-assets",
+    "bucket:list": "wrangler r2 object list cf-blog-assets",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241230.0",
+    "typescript": "^5.7.3",
+    "wrangler": "^4.0.0"
+  }
+}
