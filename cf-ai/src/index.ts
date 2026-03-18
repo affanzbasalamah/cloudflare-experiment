@@ -3,9 +3,11 @@ interface Env {
 }
 
 const ALLOWED_MODELS = [
-  "@cf/meta/llama-3-8b-instruct",
+  "@cf/meta/llama-3.1-8b-instruct",
+  "@cf/meta/llama-3.1-70b-instruct",
+  "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b",
   "@cf/mistral/mistral-7b-instruct-v0.1",
-  "@cf/google/gemma-7b-it",
+  "@cf/google/gemma-3-12b-it",
 ] as const;
 
 type AllowedModel = (typeof ALLOWED_MODELS)[number];
